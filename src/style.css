@@ -1,5 +1,6 @@
 body {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 h1 {
@@ -28,11 +29,11 @@ li::first-letter {
 
 .weather-app-wrapper {
   max-width: 500px;
-  margin: 30px auto;
+  margin: 20px auto;
 }
 
 .weather-app {
-  padding: 40px 20px 30px 50px;
+  padding: 20px 0px 20px 20px;
   border: 1px solid #6f8296;
   border-radius: 8px;
 }
@@ -62,6 +63,9 @@ li::first-letter {
   font-size: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.open-source-link {
+  padding-left: 30%;
+}
 .open-source-link:hover {
   font-style: normal;
   color: #d4330b;
@@ -77,9 +81,10 @@ li::first-letter {
 .li-date {
   line-height: 35px;
   padding-left: 5px;
-  font-size: 12px;
+  font-size: 13px;
   font-style: italic;
   color: #585656;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .active {

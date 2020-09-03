@@ -10,7 +10,7 @@ function formatDate(timestamp) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+  let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday"];
   let day = days[date.getDay()];
   return `  ${day}, ${hours}:${minutes}`;
 }
@@ -34,7 +34,7 @@ function displayTemperature(response) {
 
 let apiKey = "6df68f5433f668287bfc545331edd9d1";
 let units = "metric";
-let city = "Toronto";
+let city = "Edmonton";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
 axios.get(apiUrl).then(displayTemperature);
