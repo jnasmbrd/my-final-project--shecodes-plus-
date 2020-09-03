@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App - Plus My Final Project (SheCodes)</title>
-
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -25,14 +24,14 @@
                     <input type="search" placeholder="Type a city.." class="form-control" id="city-input" autocomplete="off" />
                 </div>
                 <div class="col-3">
-                    <input type="submit" value="Search" class="btn btn-primary w-100" />
+                    <input type="submit" value="Search" class="btn btn-info w-100" />
                 </div>
             </div>
         </form>
-          <h1>Toronto</h1>
+          <h1 id="city"></h1>
           <ul>
-            <li>Thursday 15:00</li>
-            <li>Clear</li>
+            <li class="li-date">  Last updated:<span class="date" id="date"></span> </li>
+            <li id="description"></li>
           </ul>
         </div>
         <div class="row">
@@ -40,17 +39,17 @@
                 <div class="clearfix weather-temperature">
                     <img src="https://ssl.gstatic.com/onebox/weather/48/sunny.png" alt="Clear" class="float-left" />
                     <div class="float-left">
-                        <strong id="temperature">12</strong><span class="units"><a href="#"
+                        <strong id="temperature"></strong><span class="units"><a href="#"
                                 class="active">°C</a> |
-                            <a href="#" >°F</a></span>
+                            <a href="#" class="active" >°F</a></span>
                     </div>
                 </div>
             </div>
           
           <div class="col-6">
             <ul>
-              <li>Humidity: 0%</li>
-              <li>Wind: 0 km/h</li>
+              <li class="humidity">Humidity: <span id="humidity"></span>%</li>
+              <li class="wind">Wind: <span id="wind"></span> km/h</li>
             </ul>
           </div>
         </div>
