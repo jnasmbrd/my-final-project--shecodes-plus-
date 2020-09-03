@@ -4,45 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App - Plus My Final Project (SheCodes)</title>
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="src/style.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
 
   <body>
     <div class="container">
-      <h1>Toronto</h1>
-      <ul>
-        <li>Thursday 15:00</li>
-        <li>Clear</li>
-      </ul>
-      <div class="row">
-        <img
-          src="https://ssl.gstatic.com/onebox/weather/48/sunny.png"
-          alt="Clear"
-        />
-        12°C | °F
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+            <div class="overview"><form id="search-form" class="mb-3">
+            <div class="row">
+                <div class="col-9">
+                    <input type="search" placeholder="Type a city.." class="form-control" id="city-input" autocomplete="off" />
+                </div>
+                <div class="col-3">
+                    <input type="submit" value="Search" class="btn btn-primary w-100" />
+                </div>
+            </div>
+        </form>
+          <h1>Toronto</h1>
+          <ul>
+            <li>Thursday 15:00</li>
+            <li>Clear</li>
+          </ul>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="clearfix weather-temperature">
+                    <img src="https://ssl.gstatic.com/onebox/weather/48/sunny.png" alt="Clear" class="float-left" />
+                    <div class="float-left">
+                        <strong id="temperature">12</strong><span class="units"><a href="#"
+                                class="active">°C</a> |
+                            <a href="#" >°F</a></span>
+                    </div>
+                </div>
+            </div>
+          
+          <div class="col-6">
+            <ul>
+              <li>Humidity: 0%</li>
+              <li>Wind: 0 km/h</li>
+            </ul>
+          </div>
+        </div>
+        
       </div>
-      <div class="col-md-6">
-        <ul>
-          <li>humidity: 55%</li>
-          <li>Wind: 2 km/h</li>
-        </ul>
-      </div>
-      <small
-        ><a
-          href="https://github.com/jnasmbrd/my-final-project--shecodes-plus-.git"
-          target="_blank"
-          >Open-source code</a
-        >
-        by Janice Asumbrado</small
-      >
-    </div>
+    
+    <small class="bottom-text"><a href="https://github.com/jnasmbrd/my-final-project--shecodes-plus-.git" target="_blank" class="open-source-link">Open-source code</a>
+        by Janice Asumbrado</small>
     <script src="src/index.js"></script>
-  </body>
+</div>
+</body>
 </html>
