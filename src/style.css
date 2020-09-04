@@ -1,7 +1,7 @@
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background-color: #edf0f1;
+  background-color: #f9fffd;
 }
 
 h1 {
@@ -65,7 +65,8 @@ li::first-letter {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .open-source-link {
-  padding-left: 30%;
+  padding-top: 10px;
+  padding-left: 8px;
 }
 .open-source-link:hover {
   font-style: normal;
@@ -101,4 +102,29 @@ li::first-letter {
   color: #40bfe6;
   text-decoration: none;
   cursor: default;
+}
+
+.weather-forecast h6 {
+  color: #4d4d4d;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  height: 15px;
+  line-height: 15px;
+  padding-top: 7px;
+}
+.weather-forecast img {
+  display: block;
+  margin: 0 auto;
+  height: 48px;
+  width: 48px;
+}
+.weather-forecast-temperature {
+  text-align: center;
+  color: #4d4d4d;
+  font-size: 13px;
+  font-weight: 400;
+  height: auto;
+  line-height: 15px;
+  white-space: nowrap;
 }
