@@ -20,6 +20,30 @@ function formatHours(timestamp) {
   return `${hours}: ${minutes}`;
 }
 
+// Current Date
+function actualDate(date) {
+  let todaysDate = new Date();
+  let monthIndex = date.getMonth();
+  let months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "July",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let month = months[monthIndex];
+  let currentDateElement = document.querySelector("#current-date");
+
+  return (currentDateElement = `${todaysDate.getDate()} ${month} ${todaysDate.getUTCFullYear()} `);
+}
+
 function displayTemperature(response) {
   //console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
@@ -82,7 +106,12 @@ function search(city) {
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
-  search(cityInputElement.value);
+  if (cityInputElement !== "") {
+    document.querySelector("#city").innerHTML = cityInputElement;
+    search(cityInputElement.value);
+  } else {
+    alert("Please type a city.");
+  }
 }
 
 function displayFahrenheitTemperature(event) {
