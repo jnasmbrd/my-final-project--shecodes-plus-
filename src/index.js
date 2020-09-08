@@ -1,8 +1,9 @@
 //timestamp is going to be the number of milliseconds that has happened since 1970
 //calculate the date by 1000s see below in response.data
+
 function formatDate(timestamp) {
   let date = new Date(timestamp);
-  let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday"];
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
   let day = days[date.getDay()];
   return `  ${day}, ${formatHours(timestamp)}`;
 }
@@ -17,7 +18,7 @@ function formatHours(timestamp) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  return `${hours}: ${minutes}`;
+  return `${hours}:${minutes}`;
 }
 
 function displayTemperature(response) {
@@ -47,6 +48,7 @@ function displayTemperature(response) {
 }
 
 function displayForecast(response) {
+  //console.log(response.data);
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
   let forecast = null;
@@ -81,7 +83,7 @@ function search(city) {
 }
 function handleSubmit(event) {
   event.preventDefault();
-  let cityInputElement = document.querySelector("#city-input");
+  let cityInputElement = document.querySelector("#city-input").value;
   if (cityInputElement !== "") {
     document.querySelector("#city").innerHTML = cityInputElement;
     search(cityInputElement.value);
@@ -119,5 +121,23 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+//current location button
+function currentPosition(position) {
+  let apiKey = "6df68f5433f668287bfc545331edd9d1";
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=${units}`;
+
+  axios.get(apiUrl).then(search);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(currentPosition);
+}
+
+// Geolocation
+let currentLocationButton = document.querySelector("#current-location-button");
+currentLocationButton.addEventListener("click", getCurrentLocation);
 
 search("Edmonton");
