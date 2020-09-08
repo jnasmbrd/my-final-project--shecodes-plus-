@@ -11,6 +11,7 @@ h1 {
 }
 h4 {
   font-size: 16px;
+  padding-bottom: 15px;
 }
 ul {
   margin: 0;
@@ -179,7 +180,7 @@ li::first-letter {
   font-family: monospace;
   background-color: #000000;
   color: #efd6ff;
-  border: 1px solid #46078d;
+  border: 2px solid #46078d;
   border-radius: 10px;
   box-shadow: 3px 3px 4px rgba(209, 206, 209, 0.685);
 }
