@@ -117,7 +117,7 @@ li::first-letter {
 }
 .weather-details {
   padding-top: 7px;
-  padding-left: 80px;
+  padding-left: 30px;
 }
 .humidity {
   color: #000000;
@@ -165,7 +165,7 @@ li::first-letter {
 }
 
 .btn-secondary {
-  font-size: 9px;
+  font-size: 10px;
   color: #efd6ff;
   font-family: monospace;
   background-color: #000000;
