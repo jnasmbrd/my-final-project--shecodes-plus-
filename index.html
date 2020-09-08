@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App - My Final Project (SheCodes-Plus) </title>
+    <title>Weather App - My Final Project (SheCodes-Plus)</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -18,49 +18,72 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-            <div class="overview">
+          <div class="overview">
             <form id="search-form" class="mb-5">
-            <div class="row">
+              <div class="row">
                 <div class="col-9">
-                    <input type="search" placeholder="Type a city.." class="form-control" id="city-input" autocomplete="off" />
+                  <input
+                    type="search"
+                    placeholder="Type a city.."
+                    class="form-control"
+                    id="city-input"
+                    autocomplete="off"
+                  />
                 </div>
                 <div class="col-3">
-                    <input type="submit" value="Search" class="btn btn-info w-100" />
+                  <input
+                    type="submit"
+                    value="Search"
+                    class="btn btn-info w-100"
+                  />
                 </div>
-            </div>
-        </form>
-        
-          <h1 id="city"></h1>
-        <h6 class="current-date" id="current-date"></h6>
-          <ul>
-            <li class="li-date">Last updated:<span class="date" id="date"></span> </li>
-            <li id="description" class="description"></li>
-          </ul>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <div class="clearfix weather-temperature">
-                    <img src="" alt="" id="icon" class="float-left" />
-                    <div class="float-left">
-                        <strong id="temperature"></strong><span class="units"><a href="#"
-                                class="active" id="celsius-link">°C</a> |
-                            <a href="#" class="active" id="fahrenheit-link">°F</a></span>
-                    </div>
-                </div>
-            </div>
-          <div class="col-6">
+              </div>
+            </form>
+            <h1 id="city"></h1>
+
             <ul>
-              <li class="humidity">Humidity: <span id="humidity"></span>%</li>
-              <li class="wind">Wind: <span id="wind"></span> km/h</li>
+              <li class="li-date">
+                Last updated:<span class="date" id="date"></span>
+              </li>
+              <li id="description" class="description"></li>
             </ul>
+            <div class="row">
+              <div class="col-6">
+                <div class="clearfix weather-temperature">
+                  <img src="" alt="" id="icon" class="float-left" />
+                  <div class="float-left">
+                    <strong id="temperature"></strong
+                    ><span class="units"
+                      ><a href="#" class="active" id="celsius-link">°C</a> |
+                      <a href="#" class="active" id="fahrenheit-link"
+                        >°F</a
+                      ></span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <ul>
+                  <li class="humidity">
+                    Humidity: <span id="humidity"></span>%
+                  </li>
+                  <li class="wind">Wind: <span id="wind"></span> km/h</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-
-<div class="row weather-forcast" id="forecast"></div>
-</div>
-    <small class="bottom-text"><a href="https://github.com/jnasmbrd/my-final-project--shecodes-plus-.git" target="_blank" class="open-source-link">Open-source code</a>
-        by Janice Asumbrado</small>
+      </div>
+      <small class="bottom-text"
+        ><a
+          href="https://github.com/jnasmbrd/my-final-project--shecodes-plus-.git"
+          target="_blank"
+          class="open-source-link"
+          >Open-source code</a
+        >
+        by Janice Asumbrado</small
+      >
+    </div>
     <script src="src/index.js"></script>
-</div>
-</body>
+  </body>
 </html>

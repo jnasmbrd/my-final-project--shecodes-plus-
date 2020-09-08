@@ -2,13 +2,13 @@
 //calculate the date by 1000s see below in response.data
 function formatDate(timestamp) {
   let date = new Date(timestamp);
-
   let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday"];
   let day = days[date.getDay()];
   return `  ${day}, ${formatHours(timestamp)}`;
 }
 
 function formatHours(timestamp) {
+  let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -18,30 +18,6 @@ function formatHours(timestamp) {
     minutes = `0${minutes}`;
   }
   return `${hours}: ${minutes}`;
-}
-
-// Current Date
-function actualDate(date) {
-  let todaysDate = new Date();
-  let monthIndex = date.getMonth();
-  let months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "July",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
-  let month = months[monthIndex];
-  let currentDateElement = document.querySelector("#current-date");
-
-  return (currentDateElement = `${todaysDate.getDate()} ${month} ${todaysDate.getUTCFullYear()} `);
 }
 
 function displayTemperature(response) {
@@ -77,18 +53,18 @@ function displayForecast(response) {
 
   for (let index = 0; index < 6; index++) {
     forecast = response.data.list[index];
-    forecastElement.innerHTML = `
+    forecastElement.innerHTML += `
   <div class="col-2">
         <h6>
             ${formatHours(forecast.dt * 1000)}
         </h6>
         <img src="https://openweathermap.org/img/wn/${
           forecast.weather[0].icon
-        }@2x.png" alt="">
+        }@2x.png">
         <div class="weather-forecast-temperature">
-            <strong>${Math.round(forecast.main.temp_max)}</strong> ${Math.round(
-      forecast.main.temp_min
-    )}
+            <strong>${Math.round(
+              forecast.main.temp_max
+            )}°</strong> ${Math.round(forecast.main.temp_min)}°
         </div>
     </div>`;
   }
