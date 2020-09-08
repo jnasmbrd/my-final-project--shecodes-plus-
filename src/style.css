@@ -26,14 +26,12 @@ li {
   font-weight: 100;
   line-height: 19px;
 }
+form {
+  padding-left: auto;
+}
+
 li::first-letter {
   text-transform: capitalize;
-}
-.day-time {
-  color: #ffffff;
-}
-.current-date {
-  color: #ffffff;
 }
 
 .header-weather-today {
