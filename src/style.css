@@ -170,10 +170,14 @@ li::first-letter {
 }
 .form-control {
   text-align: center;
+  display: table-cell;
+  vertical-align: middle;
 }
 .btn-secondary {
   font-size: 10px;
   text-align: center;
+  display: table-cell;
+  vertical-align: middle;
   color: #efd6ff;
   font-family: monospace;
   background-color: #000000;
